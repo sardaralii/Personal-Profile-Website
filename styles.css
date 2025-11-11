@@ -1,0 +1,110 @@
+:root {
+  --bg-dark: #0f0f10;
+  --text-light: #eaeaea;
+  --accent1: #00e1ff;
+  --accent2: #b77cff;
+  --profile-glow: rgba(183, 124, 255, 0.8);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Hero Section */
+.home-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top left, #151515, #0b0b0b);
+  padding: 80px 0;
+}
+
+/* Profile */
+.profile-container {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  box-shadow: 0 0 30px rgba(183, 124, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.profile-container:hover .profile-img {
+  transform: scale(1.08);
+  border: 5px solid var(--profile-glow);
+  box-shadow: 0 0 40px var(--profile-glow), 0 0 80px rgba(0, 225, 255, 0.25);
+  cursor: pointer;
+}
+
+/* Text Styles */
+.intro-line {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+.hero-name {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(183, 124, 255, 0.2);
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cfd3d7;
+  text-align: justify;
+  max-width: 900px;
+}
+
+/* Social Buttons */
+.btn-social {
+  color: #fff;
+  border: 1px solid var(--accent1);
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-social:hover {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  border-color: transparent;
+  color: #0b0b0b;
+  transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes glowText {
+  from { text-shadow: 0 0 10px var(--accent1), 0 0 20px var(--accent2); }
+  to   { text-shadow: 0 0 30px var(--accent2), 0 0 50px var(--accent1); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-name { font-size: 3rem; }
+  .intro-line { font-size: 1.6rem; }
+  .profile-img { width: 200px; height: 200px; }
+  .hero-desc { text-align: left; }
+}
