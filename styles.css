@@ -1,9 +1,10 @@
 :root {
   --bg-dark: #0f0f10;
   --text-light: #eaeaea;
-  --accent1: #00e1ff;
-  --accent2: #b77cff;
+  --accent1: #00e1ff; /* Light Cyan */
+  --accent2: #b77cff; /* Light Violet/Purple */
   --profile-glow: rgba(183, 124, 255, 0.8);
+  --section-bg: #1a1a1c;
 }
 
 body {
@@ -13,12 +14,50 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar */
+/* General Section Styles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  /* Use the gradient for section titles */
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(183, 124, 255, 0.1);
+}
+
+.feature-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 225, 255, 0.3), transparent);
+    margin: 4rem 0;
+}
+
+/* --- Navbar Styles --- */
 .navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Hero Section */
+.nav-link {
+  color: var(--text-light) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent1) !important;
+}
+
+/* Navbar Resume Button */
+.btn-outline-info {
+    color: var(--accent1);
+    border-color: var(--accent1);
+}
+
+.btn-outline-info:hover {
+    background-color: var(--accent1);
+    color: var(--bg-dark) !important;
+}
+
+
+/* --- Home Section & Profile --- */
 .home-hero {
   min-height: 90vh;
   display: flex;
@@ -27,7 +66,6 @@ body {
   padding: 80px 0;
 }
 
-/* Profile */
 .profile-container {
   position: relative;
   display: inline-block;
@@ -50,7 +88,7 @@ body {
   cursor: pointer;
 }
 
-/* Text Styles */
+/* Text & Button Styles */
 .intro-line {
   font-size: 2.2rem;
   font-weight: 700;
@@ -78,7 +116,6 @@ body {
   max-width: 900px;
 }
 
-/* Social Buttons */
 .btn-social {
   color: #fff;
   border: 1px solid var(--accent1);
@@ -95,6 +132,124 @@ body {
   transform: translateY(-3px);
 }
 
+.btn-outline-social {
+    /* For secondary buttons like Demo/View link in projects */
+    color: var(--accent2);
+    border: 1px solid var(--accent2);
+    padding: 10px 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-outline-social:hover {
+    background-color: var(--accent2);
+    color: var(--bg-dark);
+    border-color: var(--accent2);
+}
+
+
+/* --- SKILLS SECTION STYLES --- */
+.skill-card {
+    background-color: var(--section-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%; 
+}
+
+.skill-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #242426;
+    border-color: var(--accent1);
+    box-shadow: 0 0 20px rgba(0, 225, 255, 0.2);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+
+/* --- PROJECTS SECTION STYLES --- */
+.project-card {
+    background-color: var(--section-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent2);
+    box-shadow: 0 10px 25px rgba(183, 124, 255, 0.3);
+}
+
+.tech-tags .badge {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+
+/* --- CONTACT SECTION STYLES --- */
+.contact-form {
+    background-color: var(--section-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-label {
+    color: var(--accent1);
+    font-weight: 600;
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #555;
+    color: var(--text-light);
+}
+
+.form-control:focus {
+    background-color: #444;
+    border-color: var(--accent2);
+    box-shadow: 0 0 0 0.25rem rgba(183, 124, 255, 0.25);
+    color: var(--text-light);
+}
+
+.btn-submit-form {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    border: none;
+    color: var(--bg-dark);
+    font-weight: 700;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.btn-submit-form:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+}
+
+.link-contact {
+    color: var(--accent1);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link-contact:hover {
+    color: var(--accent2);
+}
+
+
 /* Animation */
 @keyframes glowText {
   from { text-shadow: 0 0 10px var(--accent1), 0 0 20px var(--accent2); }
@@ -107,4 +262,5 @@ body {
   .intro-line { font-size: 1.6rem; }
   .profile-img { width: 200px; height: 200px; }
   .hero-desc { text-align: left; }
+  .section-title { font-size: 2rem; }
 }

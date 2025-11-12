@@ -3,41 +3,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sardar Ali — Home</title>
+  <title>Sardar Ali — DevOps Engineer Portfolio</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap (v5.3.3) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Icons (Bootstrap & Devicon for Tech Icons) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-  <!-- Custom CSS -->
+
+  <!-- Custom CSS (styles.css content is assumed to be available) -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="50">
 
-  <!-- Navbar (Home only) -->
-  <nav class="navbar navbar-dark bg-dark py-2">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top" id="main-nav">
     <div class="container">
-      <a class="navbar-brand" href="#"></a>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-      </ul>
+      <!-- LOGO SECTION LEFT EMPTY (User Request) -->
+      <a class="navbar-brand fw-bold" href="#home"></a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <!-- Resume Button (Link confirmed as assets/Sardar_Ali_Resume.pdf) -->
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-outline-info btn-sm" href="assets/Sardar_Ali_Resume.pdf" target="_blank">
+              <i class="bi bi-file-earmark-person"></i> Resume
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- Home Section -->
-  <main class="home-hero">
+  <main class="home-hero" id="home">
     <div class="container">
       <div class="row align-items-center gy-5">
         <!-- Profile Image -->
         <div class="col-lg-4 text-center">
           <div class="profile-container">
+            <!-- Ensure 'assets/profile.jpg' is correct -->
             <img src="assets/profile.jpg" alt="Sardar Ali" class="profile-img">
           </div>
         </div>
@@ -48,10 +72,10 @@
           <h1 class="hero-name">Sardar Ali</h1>
 
           <p class="hero-desc mt-4">
-            I’m a results-driven DevOps Engineer with proven expertise in designing, automating,
+            I’m a results-driven **DevOps Engineer** with proven expertise in designing, automating,
             and optimizing cloud-native infrastructures. Skilled in CI/CD pipelines, container
-            orchestration, cloud platforms, and infrastructure as code. Experienced with AWS,
-            Docker, Kubernetes, Terraform, Jenkins, and GitHub Actions. I specialize in bridging
+            orchestration, cloud platforms, and infrastructure as code. Experienced with **AWS,
+            Docker, Kubernetes, Terraform, Jenkins, and GitHub Actions**. I specialize in bridging
             the gap between development and operations to deliver secure and scalable systems.
           </p>
 
@@ -69,10 +93,251 @@
     </div>
   </main>
 
+  <!-- --- SKILLS SECTION --- -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">
+        <i class="bi bi-gear-fill me-2"></i> My Tech Stack
+      </h2>
+
+      <!-- Skills Grid -->
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 text-center">
+        
+        <!-- Skill 1: Web Development (User Request) -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-html5-plain colored skill-icon"></i>
+            <p class="skill-name">Web Development</p>
+          </div>
+        </div>
+
+        <!-- Skill 2: AWS -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-amazonwebservices-original colored skill-icon"></i>
+            <p class="skill-name">AWS</p>
+          </div>
+        </div>
+
+        <!-- Skill 3: Docker -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-docker-plain colored skill-icon"></i>
+            <p class="skill-name">Docker</p>
+          </div>
+        </div>
+
+        <!-- Skill 4: Kubernetes -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-kubernetes-plain colored skill-icon"></i>
+            <p class="skill-name">Kubernetes</p>
+          </div>
+        </div>
+
+        <!-- Skill 5: Terraform -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-terraform-plain colored skill-icon"></i>
+            <p class="skill-name">Terraform</p>
+          </div>
+        </div>
+
+        <!-- Skill 6: Jenkins -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-jenkins-plain colored skill-icon"></i>
+            <p class="skill-name">Jenkins</p>
+          </div>
+        </div>
+
+        <!-- Skill 7: Git -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-git-plain colored skill-icon"></i>
+            <p class="skill-name">Git</p>
+          </div>
+        </div>
+        
+        <!-- Skill 8: Python -->
+        <div class="col">
+          <div class="skill-card">
+            <i class="devicon-python-plain colored skill-icon"></i>
+            <p class="skill-name">Python</p>
+          </div>
+        </div>
+        
+        <!-- Skill 9: Ansible -->
+         <div class="col">
+          <div class="skill-card">
+            <i class="devicon-ansible-plain colored skill-icon"></i>
+            <p class="skill-name">Ansible</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <hr class="feature-divider">
+
+  <!-- --- PROJECTS SECTION --- -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">
+        <i class="bi bi-cpu-fill me-2"></i> Featured Projects
+      </h2>
+
+      <div class="row row-cols-1 row-cols-lg-3 g-4">
+        
+        <!-- Project Card 1: Cloud-Native Resource Monitoring (GitHub Link Updated) -->
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Cloud-Native Resource Monitoring App</h5>
+              <p class="card-text text-muted">Automated deployment of a microservice application to an AWS EKS cluster using Terraform, Jenkins, and Helm charts for resource monitoring.</p>
+              
+              <div class="tech-tags mb-3">
+                <span class="badge text-bg-primary me-2">Kubernetes</span>
+                <span class="badge text-bg-warning me-2">AWS EKS</span>
+                <span class="badge text-bg-danger">Jenkins</span>
+              </div>
+              
+              <!-- GitHub Link -->
+              <a href="https://github.com/sardaralii/Cloud-Native-Resource-Monitoring-App-prac" target="_blank" class="btn btn-sm btn-social me-2">
+                <i class="bi bi-github"></i> Repo
+              </a>
+              <!-- View Link points to GitHub -->
+              <a href="https://github.com/sardaralii/Cloud-Native-Resource-Monitoring-App-prac" target="_blank" class="btn btn-sm btn-outline-social">
+                <i class="bi bi-box-arrow-up-right"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2: Node Todo CI/CD (GitHub Link Updated) -->
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Node.js Todo CI/CD Pipeline</h5>
+              <p class="card-text text-muted">A complete CI/CD setup for a Node.js application, demonstrating automated testing, building, and deployment using GitHub Actions and Docker.</p>
+              
+              <div class="tech-tags mb-3">
+                <span class="badge text-bg-primary me-2">Docker</span>
+                <span class="badge text-bg-info me-2">GitHub Actions</span>
+                <span class="badge text-bg-success">Node.js</span>
+              </div>
+              
+              <!-- GitHub Link -->
+              <a href="https://github.com/sardaralii/Node-todo-cicd-prac" target="_blank" class="btn btn-sm btn-social me-2">
+                <i class="bi bi-github"></i> Repo
+              </a>
+              <!-- View Link points to GitHub -->
+              <a href="https://github.com/sardaralii/Node-todo-cicd-prac" target="_blank" class="btn btn-sm btn-outline-social">
+                <i class="bi bi-box-arrow-up-right"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Two-Tier Flask App (GitHub Link Updated) -->
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Two-Tier Flask Application Deployment</h5>
+              <p class="card-text text-muted">Infrastructure provisioning and deployment of a multi-tier Python Flask application and MySQL database using Ansible for configuration management.</p>
+              
+              <div class="tech-tags mb-3">
+                <span class="badge text-bg-secondary me-2">Ansible</span>
+                <span class="badge text-bg-dark me-2">Python</span>
+                <span class="badge text-bg-warning">MySQL</span>
+              </div>
+              
+              <!-- GitHub Link -->
+              <a href="https://github.com/sardaralii/two-tier-flask-app-prac" target="_blank" class="btn btn-sm btn-social me-2">
+                <i class="bi bi-github"></i> Repo
+              </a>
+              <!-- View Link points to GitHub -->
+              <a href="https://github.com/sardaralii/two-tier-flask-app-prac" target="_blank" class="btn btn-sm btn-outline-social">
+                <i class="bi bi-box-arrow-up-right"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action for more projects -->
+      <div class="text-center mt-5">
+        <a href="https://github.com/sardaralii" target="_blank" class="btn btn-social btn-lg">
+          <i class="bi bi-box-arrow-up-right"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <hr class="feature-divider">
+
+  <!-- --- CONTACT SECTION --- -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">
+        <i class="bi bi-envelope-fill me-2"></i> Get In Touch
+      </h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="text-center mb-4 text-muted">
+            I'm currently open to new DevOps opportunities. Feel free to connect via LinkedIn or send me a message directly!
+          </p>
+
+          <!-- Contact Form -->
+          <!-- NOTE: This form requires a backend service (like Formspree or Netlify Forms) to actually send emails. Replace YOUR_FORM_SUBMISSION_URL -->
+          <form action="YOUR_FORM_SUBMISSION_URL" method="POST" class="contact-form p-4 rounded-3 shadow">
+            
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-submit-form">Send Message <i class="bi bi-send-fill ms-2"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Direct Contact Info (Email Address Updated) -->
+      <div class="text-center mt-5">
+        <p class="mb-1">Or email me directly:</p>
+        <a href="mailto:sardaaralee.cloudlem@gmail.com" class="link-contact">
+          sardaaralee.cloudlem@gmail.com
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+
   <footer class="text-center py-4 bg-dark text-muted">
-    <small>© <span id="year"></span> Sardar Ali</small>
+    <small>© <span id="year"></span> Sardar Ali — DevOps Engineer</small>
   </footer>
 
+  <!-- Bootstrap and Year JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
